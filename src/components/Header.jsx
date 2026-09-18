@@ -130,6 +130,9 @@ export default function Header() {
         <div className="container header__inner">
           <div className="header__left">
             <Logo />
+          </div>
+
+          <div className="header__right">
             <div className="header__explore-wrap" style={{ position: 'relative' }}>
               <div className="header__desktop-nav">
                 <button
@@ -175,9 +178,6 @@ export default function Header() {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="header__right">
             <ThemeToggle />
             <a href="#inscripcion" className="btn btn--primary btn--small header__cta" onClick={(e) => { e.preventDefault(); trackCta('Inscribirme', 'header') }}>
               Inscribirme

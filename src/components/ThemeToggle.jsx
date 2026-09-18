@@ -4,9 +4,8 @@ import { useTheme } from '../hooks/useTheme'
 /**
  * Selector de tema oscuro/claro.
  *
- * Ambos iconos se renderizan siempre y el CSS decide cuál se ve según
- * `html[data-theme]` — así el estado visual no depende del render de React
- * (evita saltos de tema en la primera pintura y al hidratar).
+ * Switch horizontal accesible. Ambos iconos permanecen visibles como
+ * referencia y el pulgar señala el tema activo.
  */
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme()
@@ -15,8 +14,9 @@ export default function ThemeToggle() {
     <button
       type="button"
       className="theme-toggle"
+      role="switch"
       aria-label={theme === 'dark' ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
-      aria-pressed={theme === 'light'}
+      aria-checked={theme === 'dark'}
       title={theme === 'dark' ? 'Cambiar a tema claro' : 'Cambiar a tema oscuro'}
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
@@ -26,6 +26,7 @@ export default function ThemeToggle() {
       <span className="theme-toggle__ico theme-toggle__ico--moon" aria-hidden="true">
         <Moon size={16} />
       </span>
+      <span className="theme-toggle__thumb" aria-hidden="true" />
     </button>
   )
 }
