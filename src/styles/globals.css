@@ -449,6 +449,12 @@ div[id] {
   width: 22px;
 }
 
+@media (min-width: 1024px) {
+  .hamburger.header__mobile-trigger {
+    display: none;
+  }
+}
+
 /* ------------------------------------------------------------------ */
 /*  Panel Explorar (desktop)                                          */
 /* ------------------------------------------------------------------ */
