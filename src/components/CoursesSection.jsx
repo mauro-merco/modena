@@ -17,10 +17,10 @@ gsap.registerPlugin(ScrollTrigger)
 
 /** Pareja foto real-curso (decisión visual; las piezas son material real de MODENA). */
 const COURSE_PHOTOS = {
-  'mecanica-automotriz': 'clase-02',
-  'electricidad-automotriz': 'clase-06',
-  motos: 'clase-04',
-  'inyeccion-electronic-a-automotriz': 'clase-03',
+  'mecanica-automotriz': 'mecanica-practica',
+  'electricidad-automotriz': 'diagnostico-electronico',
+  motos: 'mecanica-motos',
+  'inyeccion-electronic-a-automotriz': 'formacion-practica',
 }
 
 const photoAltFor = (key, courseName) =>

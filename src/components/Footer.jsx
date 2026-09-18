@@ -23,7 +23,7 @@ export default function Footer() {
             <a href="#inicio" className="footer__logo" onClick={go('inicio')} aria-label="MODENA — volver al inicio">
               <img
                 className="logo-theme logo-theme--light"
-                src="/logo-para-fondo-light.png"
+                src="/media/brand/logo-para-fondo-light.webp"
                 width="200"
                 height="103"
                 alt=""
@@ -31,7 +31,7 @@ export default function Footer() {
               />
               <img
                 className="logo-theme logo-theme--dark"
-                src="/logo-para-fondo-dark.png"
+                src="/media/brand/logo-para-fondo-dark.webp"
                 width="200"
                 height="103"
                 alt=""

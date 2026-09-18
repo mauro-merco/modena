@@ -3,7 +3,7 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import Photo from './Photo'
-import { STRIP, VIDEO, GALLERY } from '../data/media'
+import { STRIP, GALLERY } from '../data/media'
 import { useReducedMotion } from '../hooks/useReducedMotion'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -52,32 +52,12 @@ export default function MediaStrip() {
     <section className="strip-wrap" aria-label="Evidencia real de las clases en MODENA">
       <div className="strip container-site" ref={rootRef}>
         <div className="strip__track" ref={trackRef}>
-          {STRIP.map((item, i) =>
-            item.kind === 'video' ? (
-              <figure key={`strip-${item.key}`} className="strip__item">
-                <div className="strip__video">
-                  <video
-                    muted
-                    loop
-                    playsInline
-                    preload="metadata"
-                    poster={VIDEO.poster}
-                    aria-hidden="true"
-                    tabIndex={-1}
-                  >
-                    <source src={VIDEO.loopWebm} type="video/webm" />
-                    <source src={VIDEO.loopMp4} type="video/mp4" />
-                  </video>
-                </div>
-                {item.caption ? <figcaption className="strip__caption">{item.caption}</figcaption> : null}
-              </figure>
-            ) : (
-              <figure key={`strip-${item.key}-${i}`} className="strip__item">
-                <Photo photoKey={item.key} alt={altFor(item.key)} sizes="(min-width: 1024px) 22vw, 70vw" loading="lazy" className="strip__media" imgClassName="strip__media-img" />
-                {item.caption ? <figcaption className="strip__caption">{item.caption}</figcaption> : null}
-              </figure>
-            ),
-          )}
+          {STRIP.map((item, i) => (
+            <figure key={`strip-${item.key}-${i}`} className="strip__item">
+              <Photo photoKey={item.key} alt={altFor(item.key)} sizes="(min-width: 1024px) 22vw, 70vw" loading="lazy" className="strip__media" imgClassName="strip__media-img" />
+              {item.caption ? <figcaption className="strip__caption">{item.caption}</figcaption> : null}
+            </figure>
+          ))}
         </div>
       </div>
     </section>

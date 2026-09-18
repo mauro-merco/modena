@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import Photo from './Photo'
 import { Chip } from './primitives'
 import { HERO } from '../data/site'
-import { HERO_PHOTO, STRIP, GALLERY } from '../data/media'
+import { HERO_PHOTO } from '../data/media'
 import { scrollToTargetSection } from '../lib/scroll'
 import { track } from '../lib/analytics'
 import { useReducedMotion } from '../hooks/useReducedMotion'
@@ -17,11 +17,6 @@ import { useReducedMotion } from '../hooks/useReducedMotion'
 export default function Hero() {
   const rootRef = useRef(null)
   const reduced = useReducedMotion()
-
-  const marbete = STRIP.find((item) => item.kind !== 'video' && item.key !== HERO_PHOTO.key) || STRIP[0]
-  const marbeteAlt =
-    GALLERY.find((g) => g.kind === 'photo' && g.key === marbete.key)?.alt ||
-    `${HERO_PHOTO.alt} (detalle de clase práctica)`
 
   useGSAP(
     (context) => {
@@ -99,16 +94,9 @@ export default function Hero() {
               mask
             />
           </div>
-          <div className="hero__card">
-            <Photo
-              photoKey={marbete.key}
-              alt={marbeteAlt}
-              sizes="(min-width: 1024px) 20vw, 44vw"
-              className="hero__card-photo"
-              loading="lazy"
-              mask="soft"
-            />
-            <span className="hero__card-tag">{marbete.caption}</span>
+          <div className="hero__media-mark" aria-hidden="true">
+            <span>Práctica real</span>
+            <span>Formación intensiva</span>
           </div>
         </div>
       </div>

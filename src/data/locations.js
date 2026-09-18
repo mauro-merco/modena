@@ -14,7 +14,7 @@ export const LOCATIONS = [
     mapsUrl: null,
     /** Descripción corta validada · la disponibilidad por curso se confirma al consultar. */
     note: 'Disponibilidad por curso y horarios a confirmar al consultar.',
-    photo: 'clase-05',
+    photo: 'formacion-practica',
   },
   {
     id: 'la-plata',
@@ -25,7 +25,7 @@ export const LOCATIONS = [
     addressNote: null,
     mapsUrl: null,
     note: 'Disponibilidad por curso y horarios a confirmar al consultar.',
-    photo: 'clase-07',
+    photo: 'mecanica-practica',
   },
   {
     id: 'caba-constitucion',
@@ -36,7 +36,7 @@ export const LOCATIONS = [
     addressNote: null,
     mapsUrl: null,
     note: 'Disponibilidad por curso y horarios a confirmar al consultar.',
-    photo: 'clase-04',
+    photo: 'mecanica-motos',
   },
 ]
 

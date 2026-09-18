@@ -17,8 +17,8 @@ function SkipLink() {
 function Logo() {
   return (
     <a href="#inicio" className="header__logo" aria-label="MODENA — volver al inicio">
-      <img className="logo-theme logo-theme--light" src="/logo-para-fondo-light.png" width="1416" height="729" alt="" loading="eager" />
-      <img className="logo-theme logo-theme--dark" src="/logo-para-fondo-dark.png" width="1416" height="729" alt="" loading="eager" />
+      <img className="logo-theme logo-theme--light" src="/media/brand/logo-para-fondo-light.webp" width="1416" height="729" alt="" loading="eager" />
+      <img className="logo-theme logo-theme--dark" src="/media/brand/logo-para-fondo-dark.webp" width="1416" height="729" alt="" loading="eager" />
     </a>
   )
 }
@@ -126,12 +126,12 @@ export default function Header() {
   return (
     <>
       <SkipLink />
-      <header ref={headerRef} className="header" data-scrolled={scrolled} data-dark={null}>
+      <header ref={headerRef} className={`header ${scrolled ? 'is-scrolled' : ''} ${menuOpen ? 'is-open' : ''}`}>
         <div className="container header__inner">
           <div className="header__left">
             <Logo />
             <div className="header__explore-wrap" style={{ position: 'relative' }}>
-              <div className="hidden lg:block">
+              <div className="header__desktop-nav">
                 <button
                   type="button"
                   ref={panelBtnRef}
@@ -185,7 +185,7 @@ export default function Header() {
             <button
               ref={menuBtnRef}
               type="button"
-              className="hamburger lg:hidden"
+              className="hamburger header__mobile-trigger"
               aria-expanded={menuOpen}
               aria-controls="menu-mobile"
               aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}

@@ -8,6 +8,25 @@ export const PHOTO_WIDTHS = [400, 640, 1080]
 export const PHOTO_W = 1122
 export const PHOTO_H = 1402
 
+export const CUTOUTS = {
+  'mecanica-practica': {
+    src: '/media/cutout/mecanica-practica.webp',
+    alt: 'Dos estudiantes realizando una práctica de mecánica sobre un motor de automóvil',
+  },
+  'diagnostico-electronico': {
+    src: '/media/cutout/diagnostico-electronico.webp',
+    alt: 'Estudiantes realizando diagnóstico electrónico sobre un automóvil',
+  },
+  'mecanica-motos': {
+    src: '/media/cutout/mecanica-motos.webp',
+    alt: 'Estudiantes trabajando sobre un motor de motocicleta en banco',
+  },
+  'formacion-practica': {
+    src: '/media/cutout/formacion-practica.webp',
+    alt: 'Instructor guiando a estudiantes durante una práctica sobre un motor',
+  },
+}
+
 export const VIDEO = {
   key: 'pauta-electricidad',
   title: 'Pauta — Electricidad y Electrónica del Automóvil',
@@ -28,83 +47,49 @@ export const VIDEO = {
 export const GALLERY = [
   {
     kind: 'photo',
-    key: 'clase-01',
+    key: 'mecanica-practica',
     span: 'lg:col-span-5 lg:row-span-2',
     ratio: 'aspect-[4/5]',
-    alt: 'Práctica de mecánica automotriz en el taller de MODENA con herramientas y componentes reales',
-    caption: 'Clases prácticas en el taller',
-    altPendingReview: true,
-  },
-  {
-    kind: 'video',
-    key: VIDEO.key,
-    span: 'lg:col-span-4 lg:row-span-2',
-    ratio: 'aspect-[9/16]',
-    title: 'Electricidad y Electrónica del Automóvil',
-    alt: 'Pieza audiovisual del curso de Electricidad y Electrónica del Automóvil de MODENA',
-    caption: 'Electricidad y Electrónica del Automóvil',
+    alt: CUTOUTS['mecanica-practica'].alt,
+    caption: 'Mecánica automotriz en práctica',
   },
   {
     kind: 'photo',
-    key: 'clase-02',
+    key: 'diagnostico-electronico',
     span: 'lg:col-span-3',
     ratio: 'aspect-[4/5]',
-    alt: 'Alumno de MODENA trabajando sobre motores y componentes en clase práctica',
-    caption: 'Motores y componentes',
-    altPendingReview: true,
+    alt: CUTOUTS['diagnostico-electronico'].alt,
+    caption: 'Medición y diagnóstico',
   },
   {
     kind: 'photo',
-    key: 'clase-03',
+    key: 'mecanica-motos',
     span: 'lg:col-span-3 lg:row-span-2',
     ratio: 'aspect-[4/5]',
-    alt: 'Medición y diagnóstico sobre el sistema eléctrico del automóvil en MODENA',
-    caption: 'Medición y diagnóstico',
+    alt: CUTOUTS['mecanica-motos'].alt,
+    caption: 'Mecánica y electricidad de motos',
     parallax: true,
-    altPendingReview: true,
   },
   {
     kind: 'photo',
-    key: 'clase-04',
+    key: 'formacion-practica',
     span: 'lg:col-span-4',
     ratio: 'aspect-[4/5]',
-    alt: 'Práctica de mecánica de motos durante una clase de MODENA',
-    caption: 'Prácticas de motos',
-    altPendingReview: true,
-  },
-  {
-    kind: 'photo',
-    key: 'clase-05',
-    span: 'lg:col-span-4',
-    ratio: 'aspect-[4/5]',
-    alt: 'Interior del taller de MODENA con alumnos en formación práctica',
-    caption: 'Aulas-taller y equipamiento',
-    altPendingReview: true,
-  },
-  {
-    kind: 'photo',
-    key: 'clase-06',
-    span: 'lg:col-span-4',
-    ratio: 'aspect-[4/5]',
-    alt: 'Actividad práctica de electrónica del automóvil en el taller de MODENA',
-    caption: 'Electrónica del automóvil',
+    alt: CUTOUTS['formacion-practica'].alt,
+    caption: 'Acompañamiento docente',
     parallax: true,
-    altPendingReview: true,
   },
 ]
 
 /** Franja horizontal de evidencia inmediatamente tras el hero. */
 export const STRIP = [
-  { key: 'clase-02', caption: 'Motor en banco de trabajo' },
-  { kind: 'video', key: VIDEO.key, caption: 'Electricidad y Electrónica' },
-  { key: 'clase-04', caption: 'Práctica sobre motos' },
-  { key: 'clase-06', caption: 'Diagnóstico de señales' },
-  { key: 'clase-03', caption: 'Medición con escáner' },
-  { key: 'clase-05', caption: 'Aula-taller' },
-  { key: 'clase-07', caption: 'Herramientas y bancos' },
+  { key: 'mecanica-practica', caption: 'Mecánica automotriz' },
+  { key: 'diagnostico-electronico', caption: 'Diagnóstico electrónico' },
+  { key: 'mecanica-motos', caption: 'Mecánica de motos' },
+  { key: 'formacion-practica', caption: 'Formación práctica' },
 ]
 
-export const HERO_PHOTO = { key: 'clase-01', alt: 'Práctica de mecánica automotriz en el taller de MODENA con herramientas y componentes reales' }
+export const HERO_PHOTO = { key: 'mecanica-practica', alt: CUTOUTS['mecanica-practica'].alt }
 
 export const HERO_VIDEO_CARD = {
   poster: VIDEO.poster,
