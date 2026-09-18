@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Política de privacidad | MODENA</title>
+    <style>
+      :root {
+        --green: #0b8f4d;
+        --red: #e12821;
+        --ink: #101310;
+        --muted: #525a54;
+        --edge: rgba(16, 19, 16, 0.14);
+        --base: #f4f5f1;
+        --surface: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f6f7f4;
+          --muted: #b6bdb8;
+          --edge: rgba(255, 255, 255, 0.12);
+          --base: #090b0a;
+          --surface: #111513;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, 'Segoe UI', sans-serif;
+        background: var(--base);
+        color: var(--ink);
+        line-height: 1.65;
+      }
+      .wrap { max-width: 720px; margin: 0 auto; padding: 4rem 1.5rem 5rem; }
+      a { color: var(--green); }
+      .tag {
+        display: inline-block;
+        padding: 0.35rem 0.7rem;
+        border: 1px solid color-mix(in srgb, var(--red) 45%, transparent);
+        color: var(--red);
+        font-weight: 700;
+        font-size: 0.8rem;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      h1 { font-size: clamp(1.8rem, 5vw, 2.6rem); line-height: 1.05; text-wrap: balance; }
+      p { color: var(--muted); }
+      .bar { display: flex; height: 3px; margin-top: 3rem; }
+      .bar span { flex: 1; }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <p class="tag">Borrador — pendiente de revisión legal</p>
+      <h1>Política de privacidad</h1>
+      <p>
+        Esta página es un <strong>placeholder</strong>. El texto definitivo de la política de
+        privacidad de MODENA — Instituto de Mecánica Automotriz está en proceso de revisión
+        legal y todavía no fue publicado.
+      </p>
+      <p>
+        Mientras tanto, al completar el formulario de la landing page tus datos se tratan con el
+        único fin de responder tu consulta sobre cursos, sedes y disponibilidad, y no se comparten
+        con terceros.
+      </p>
+      <p>
+        Para consultar sobre el tratamiento de datos, podés dejarnos tu consulta por el{' '}
+        <a href="/#inscripcion">formulario de la página principal</a>.
+      </p>
+      <p><a href="/">← Volver al inicio</a></p>
+      <div class="bar" aria-hidden="true">
+        <span style="background: #0b8f4d"></span>
+        <span style="background: currentColor"></span>
+        <span style="background: #e12821"></span>
+      </div>
+    </div>
+  </body>
+</html>

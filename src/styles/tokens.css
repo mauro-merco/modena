@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ------------------------------------------------------------------ */
+/*  MODENA design tokens.
+    Los valores de --color-* son variables: Tailwind genera utilidades
+    (bg-base, text-ink, border-edge, …) que referencian var(--color-*),
+    de modo que el override en `.dark` cambia todo el tema en runtime.  */
+/* ------------------------------------------------------------------ */
+
+@theme {
+  /* Marca (constantes, no se re-tematizan) */
+  --brand-green: #0b8f4d;
+  --brand-green-bright: #33c878;
+  --brand-green-soft: #087a42;
+  --brand-red: #e12821;
+  --brand-red-soft: #d9231d;
+  --brand-white: #ffffff;
+  --brand-black: #090b0a;
+
+  /* Semánticos — light mode (default) */
+  --color-base: #f4f5f1;
+  --color-surface: #ffffff;
+  --color-raised: #ffffff;
+  --color-subtle: #e9ece7;
+  --color-ink: #101310;
+  --color-muted: #525a54;
+  --color-edge: rgba(16, 19, 16, 0.14);
+  --color-edge-strong: rgba(16, 19, 16, 0.28);
+  --color-green: #087a42;
+  --color-green-bright: #0b8f4d;
+  --color-red: #d9231d;
+  --color-red-bright: #c11d18;
+  --color-overlay: rgba(16, 19, 16, 0.55);
+  --color-ring: #0b8f4d;
+
+  --font-display: 'Barlow Condensed', 'Arial Narrow', system-ui, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --shadow-card: 0 1px 0 rgba(16, 19, 16, 0.05), 0 16px 40px -24px rgba(16, 19, 16, 0.35);
+  --shadow-float: 0 24px 60px -28px rgba(16, 19, 16, 0.5);
+}
+
+.dark {
+  --color-base: #090b0a;
+  --color-surface: #111513;
+  --color-raised: #171c19;
+  --color-subtle: #0d100f;
+  --color-ink: #f6f7f4;
+  --color-muted: #b6bdb8;
+  --color-edge: rgba(255, 255, 255, 0.12);
+  --color-edge-strong: rgba(255, 255, 255, 0.24);
+  --color-green: #0b8f4d;
+  --color-green-bright: #33c878;
+  --color-red: #e12821;
+  --color-red-bright: #f03a32;
+  --color-overlay: rgba(0, 0, 0, 0.6);
+  --color-ring: #33c878;
+
+  --shadow-card: 0 1px 0 rgba(255, 255, 255, 0.05), 0 16px 40px -24px rgba(0, 0, 0, 0.7);
+  --shadow-float: 0 24px 60px -28px rgba(0, 0, 0, 0.9);
+}

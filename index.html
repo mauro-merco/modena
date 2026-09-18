@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#090B0A" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F4F5F1" media="(prefers-color-scheme: light)" />
+
+    <title>Cursos de Mecánica Automotriz Intensivos | MODENA</title>
+    <meta
+      name="description"
+      content="Formate en mecánica automotriz, electricidad, inyección electrónica y motos con modalidad intensiva y práctica presencial. Sedes en CABA, Ezeiza y La Plata."
+    />
+    <!-- `robots` y `canonical` se ajustan en build (scripts/postbuild.mjs) y en runtime (Seo.jsx):
+         staging => noindex; producción => index + canonical si SITE.siteUrl está definido. -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MODENA" />
+    <meta property="og:title" content="Cursos de Mecánica Automotriz Intensivos | MODENA" />
+    <meta
+      property="og:description"
+      content="Formate en mecánica automotriz, electricidad, inyección electrónica y motos con modalidad intensiva y práctica presencial. Sedes en CABA, Ezeiza y La Plata."
+    />
+    <meta property="og:image" content="/og/og-image.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Cursos de Mecánica Automotriz Intensivos | MODENA" />
+    <meta
+      name="twitter:description"
+      content="Formate en mecánica automotriz, electricidad, inyección electrónica y motos con modalidad intensiva y práctica presencial. Sedes en CABA, Ezeiza y La Plata."
+    />
+    <meta name="twitter:image" content="/og/og-image.jpg" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <link rel="preload" as="image" href="/media/photo/clase-01@1080.avif" type="image/avif" fetchpriority="high" />
+
+    <script>
+      ;(function () {
+        try {
+          var stored = localStorage.getItem('modena-theme')
+          var theme = stored === 'dark' || stored === 'light' ? stored : null
+          if (!theme) {
+            theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          }
+          var root = document.documentElement
+          root.classList.toggle('dark', theme === 'dark')
+          root.dataset.theme = theme
+        } catch (e) {}
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>
+      <div style="font-family: system-ui, sans-serif; padding: 24px; max-width: 640px; margin: 0 auto">
+        <h1 style="font-size: 1.5rem">MODENA — Instituto de Mecánica Automotriz</h1>
+        <p>
+          Cursos intensivos y prácticos de mecánica automotriz, electricidad del automóvil, inyección
+          electrónica y mecánica de motos. Sedes en CABA, Ezeiza y La Plata.
+        </p>
+        <p>Habilitá JavaScript para ver el contenido completo y el formulario de consulta.</p>
+      </div>
+    </noscript>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

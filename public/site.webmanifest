@@ -1,0 +1,28 @@
+{
+  "name": "MODENA — Instituto de Mecánica Automotriz",
+  "short_name": "MODENA",
+  "description": "Cursos intensivos y prácticos de mecánica automotriz, electricidad, inyección electrónica y motos en CABA, Ezeiza y La Plata.",
+  "lang": "es-AR",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#090B0A",
+  "theme_color": "#090B0A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
