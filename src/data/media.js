@@ -48,36 +48,26 @@ export const GALLERY = [
   {
     kind: 'photo',
     key: 'mecanica-practica',
-    span: 'lg:col-span-5 lg:row-span-2',
-    ratio: 'aspect-[4/5]',
     alt: CUTOUTS['mecanica-practica'].alt,
     caption: 'Mecánica automotriz en práctica',
   },
   {
     kind: 'photo',
     key: 'diagnostico-electronico',
-    span: 'lg:col-span-3',
-    ratio: 'aspect-[4/5]',
     alt: CUTOUTS['diagnostico-electronico'].alt,
     caption: 'Medición y diagnóstico',
   },
   {
     kind: 'photo',
     key: 'mecanica-motos',
-    span: 'lg:col-span-3 lg:row-span-2',
-    ratio: 'aspect-[4/5]',
     alt: CUTOUTS['mecanica-motos'].alt,
     caption: 'Mecánica y electricidad de motos',
-    parallax: true,
   },
   {
     kind: 'photo',
     key: 'formacion-practica',
-    span: 'lg:col-span-4',
-    ratio: 'aspect-[4/5]',
     alt: CUTOUTS['formacion-practica'].alt,
     caption: 'Acompañamiento docente',
-    parallax: true,
   },
 ]
 
