@@ -23,7 +23,10 @@ export const SITE = {
 
 export const CONTACT = {
   phone: null,
-  whatsapp: null,
+  /** Número visible para el usuario (formato local de Argentina). */
+  whatsapp: '011 15-7151-9710',
+  /** Número en formato internacional E.164 (sin + y sin 0 del código de área), para enlaces wa.me. */
+  whatsappNumber: '5491171519710',
   email: null,
   instagram: null,
   /** Política de privacidad: ruta a documentar. La página existe como placeholder pendiente de revisión legal. */

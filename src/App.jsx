@@ -17,6 +17,7 @@ import CertificacionSection from './components/CertificacionSection'
 import FAQSection from './components/FAQSection'
 import InscripcionSection from './components/InscripcionSection'
 import MobileStickyCta from './components/MobileStickyCta'
+import WhatsAppButton from './components/WhatsAppButton'
 import Footer from './components/Footer'
 import Seo from './components/Seo'
 import { SITE } from './data/site'
@@ -44,6 +45,7 @@ export default function App() {
         <InscripcionSection />
       </main>
       <MobileStickyCta />
+      <WhatsAppButton />
       <Footer />
     </>
   )

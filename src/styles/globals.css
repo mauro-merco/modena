@@ -1851,6 +1851,207 @@ div[id] {
 }
 
 /* ------------------------------------------------------------------ */
+/*  Botón WhatsApp flotante                                           */
+/* ------------------------------------------------------------------ */
+
+.wa-float {
+  position: fixed;
+  right: clamp(0.75rem, 3vw, 1.5rem);
+  bottom: calc(1.25rem + env(safe-area-inset-bottom));
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+@media (max-width: 767.98px) {
+  .wa-float {
+    right: 0.75rem;
+    bottom: calc(5rem + env(safe-area-inset-bottom));
+  }
+}
+
+.wa-float__wrap {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.wa-float__ring {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wa-float__ring::before,
+.wa-float__ring::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: #25d366;
+  animation: wa-pulse 2.6s ease-out infinite;
+}
+
+.wa-float__ring::after {
+  animation-delay: 1.3s;
+}
+
+.wa-float__btn {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  color: #fff;
+  background: linear-gradient(135deg, #25d366, #1ba953);
+  box-shadow:
+    0 14px 30px -12px rgba(37, 211, 102, 0.7),
+    0 2px 10px rgba(16, 19, 16, 0.28);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  animation: wa-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s both;
+}
+
+.wa-float__btn svg {
+  width: 1.8rem;
+  height: 1.8rem;
+  fill: currentColor;
+}
+
+.wa-float__btn:hover,
+.wa-float__btn:focus-visible {
+  transform: scale(1.1);
+  box-shadow:
+    0 18px 40px -12px rgba(37, 211, 102, 0.85),
+    0 2px 10px rgba(16, 19, 16, 0.3);
+}
+
+@media (max-width: 767.98px) {
+  .wa-float__btn {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
+}
+
+@keyframes wa-pop {
+  0% {
+    transform: scale(0.4) translateY(24px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes wa-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.45;
+  }
+  70%,
+  100% {
+    transform: scale(1.85);
+    opacity: 0;
+  }
+}
+
+/* Burbuja de mensaje */
+.wa-bubble {
+  position: relative;
+  max-width: min(17rem, calc(100vw - 5.5rem));
+  padding: 0.8rem 1rem 0.9rem;
+  border-radius: 14px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-edge);
+  box-shadow: var(--shadow-card);
+  opacity: 0;
+  transform: translateX(10px) scale(0.95);
+  transform-origin: right bottom;
+  transition:
+    opacity 0.25s ease,
+    transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
+  pointer-events: none;
+}
+
+.wa-bubble::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  bottom: 22px;
+  width: 11px;
+  height: 11px;
+  background: var(--color-surface);
+  border-top: 1px solid var(--color-edge);
+  border-right: 1px solid var(--color-edge);
+  transform: rotate(45deg);
+}
+
+.wa-float[data-open='true'] .wa-bubble {
+  opacity: 1;
+  transform: none;
+}
+
+.wa-bubble__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--color-ink);
+}
+
+.wa-bubble__text {
+  margin: 0.3rem 0 0;
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--color-muted);
+}
+
+.wa-bubble__phone {
+  display: block;
+  margin-top: 0.55rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--color-green);
+}
+
+.wa-bubble__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  color: var(--color-green);
+}
+
+.wa-bubble__status::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #25d366;
+  animation: wa-blink 1.8s ease-in-out infinite;
+}
+
+@keyframes wa-blink {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(37, 211, 102, 0);
+  }
+}
+
+/* ------------------------------------------------------------------ */
 /*  Footer                                                            */
 /* ------------------------------------------------------------------ */
 
